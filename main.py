@@ -8,7 +8,8 @@ from dotenv import load_dotenv
 import openai
 
 load_dotenv()
-openai.api_key = os.environ["OPENAI_API_KEY"]
+# openai.api_key = os.environ["OPENAI_API_KEY"]
+os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
 
 def check_video_duration(video_url):
     try:

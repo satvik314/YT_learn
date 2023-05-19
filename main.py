@@ -36,13 +36,6 @@ def check_video_duration(video_url):
 st.title("Learn from YouTube 🤖")
 st.write("🚀 A GPT-powered tool to help you learn efficiently from YT.")
 
-# yt_url = st.text_input("Enter a Youtube URL")
-
-# if st.button("Load video"):
-#     with st.spinner("loading..."):
-#         loader = YoutubeLoader.from_youtube_url(yt_url, add_video_info=False)
-#         index = VectorstoreIndexCreator().from_loaders([loader])
-#         st.session_state.index = index
 
 
 # Create two columns for the text input and the button
@@ -86,22 +79,6 @@ with bcol2:
             st.write("Please load the video first.")
 
 
-# show_custom_query = False
-# with bcol3:
-#     # if st.button("Ask a custom query"):
-#     custom_query = st.text_input("Enter your query", placeholder = "Ask a custom query" ,label_visibility="collapsed")
-#     if custom_query:
-#         if 'index' in st.session_state:
-#             show_custom_query = True
-#             # query = st.text_input("Enter your query")
-#             # if query:
-#             #     response = st.session_state.index.query(query)
-#             #     st.write(response)
-#             # else:
-#             #     st.write("Please enter a query.")
-#         else:
-#             st.write("Please load the video first.")
-
 
 with bcol3:
     custom_query = st.text_input("Enter your query", placeholder = "Ask a custom query" ,label_visibility="collapsed")
@@ -111,11 +88,6 @@ with bcol3:
         else:
             st.write("Please load the video first.")
 
-# if show_custom_query:
-#     custom_query = st.text_input("Enter your query", placeholder = "Ask a custom query" ,label_visibility="collapsed")
-#     if custom_query:
-#        qresponse = st.session_state.index.query(custom_query)
-#        st.write(qresponse)
 
 if "response" not in st.session_state:
     st.session_state['response'] = ''

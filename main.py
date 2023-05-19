@@ -1,9 +1,14 @@
 import streamlit as st
 import os
-from config import OPENAI_API_KEY
+import time
 from langchain.document_loaders import YoutubeLoader
 from langchain.indexes import VectorstoreIndexCreator
 from pytube import YouTube
+from dotenv import load_dotenv
+import openai
+
+load_dotenv()
+openai.api_key = os.environ["OPENAI_API_KEY"]
 
 def check_video_duration(video_url):
     try:
@@ -26,9 +31,6 @@ def check_video_duration(video_url):
         print("An error occurred:", e)
 
 
-import time 
-
-os.environ["OPENAI_API_KEY"] = OPENAI_API_KEY
 
 st.title("Learn from YouTube 🤖")
 st.write("🚀 A GPT-powered tool to help you learn efficiently from YT.")

@@ -50,7 +50,7 @@ col1, col2 = st.columns([2,1])
 
 # Place the text input in the first column
 with col1:
-    yt_url = st.text_input("Enter YouTube URL")
+    yt_url = st.text_input("Enter YouTube URL", placeholder= "video length < 15 min")
 
 # Place the Load video button in the second column
 with col2:
@@ -123,3 +123,20 @@ if "response" not in st.session_state:
 if st.session_state.response:
     st.write(st.session_state.response)
 
+
+st.write("")
+st.write("")
+st.write("")
+st.write("")
+st.write("")
+st.write("")
+st.write("")
+st.write("")
+st.write("")
+st.write("")
+st.write("")
+st.write("")
+st.write("")
+
+linkedin_url = "https://www.linkedin.com/in/satvik-paramkusham-76a33610a/"
+st.markdown(f"Reach out to me on [LinkedIn]({linkedin_url})")

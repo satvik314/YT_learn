@@ -1,5 +1,4 @@
 langchain 
-pysqlite3
 pysqlite3-binary
 openai 
 youtube_transcript_api 

@@ -7,9 +7,9 @@ from pytube import YouTube
 from dotenv import load_dotenv
 import openai
 
-import(‘pysqlite3’)
+import('pysqlite3')
 import sys
-sys.modules[‘sqlite3’] = sys.modules.pop(‘pysqlite3’)
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 
 load_dotenv()
 # openai.api_key = os.environ["OPENAI_API_KEY"]
